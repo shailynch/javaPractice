@@ -8,6 +8,8 @@ public class Vehicle {
 	private boolean airbag;
 	private int numberOfDoors;
 	private int passengarCapacity;
+	private static int counter;
+	private int vehicleId;
 
 	public String getTransmission() {
 		return transmission;
@@ -31,10 +33,6 @@ public class Vehicle {
 
 	public void setNumberOfDoors(int numberOfDoors) {
 		this.numberOfDoors = numberOfDoors;
-	}
-
-	public Vehicle() {
-
 	}
 
 	public int getWheels() {
@@ -69,4 +67,16 @@ public class Vehicle {
 		this.passengarCapacity = passengarCapacity;
 	}
 
+	public static int getCounter() {
+		return counter;
+	}
+
+	public int getVehicleId() {
+		return vehicleId;
+	}
+
+	public Vehicle() {
+		vehicleId = counter++;
+
+	}
 }
